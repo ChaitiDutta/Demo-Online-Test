@@ -167,7 +167,7 @@ top: 28px;
   box-shadow: 2px 1px 3px 2px #888888;
   background-color: rgba(127, 255, 212, 0.735);
   position: relative;
-  height: 170px;
+  height: 160px;
 margin-bottom: 10px;
   width: 300px;
 }
@@ -179,5 +179,6 @@ margin-bottom: 10px;
 .details{
   padding-top: 30px;
   line-height: 1.9;
+  /* font-style: ; */
 }
 

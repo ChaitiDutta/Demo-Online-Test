@@ -87,8 +87,14 @@ const DemoPage = () => {
       setCurrentQuestionNo((prevQuestion)=> prevQuestion +1)
       setQuestionOnTheScreen((prevQuestion)=>prevQuestion+1)
       setAns(ans + 1);
+      
     }
     // setSelectedOption("");
+    if(questionOnTheScreen+1=== questions.length){
+      alert(" There is only 5 question. Your Answer have been submitted")
+    }
+
+   
 
     if (selectedOption) {
       setAns(ans + 1);
@@ -98,10 +104,14 @@ const DemoPage = () => {
     setSelectedOption(null);
     // setColor({backgroundColor: 'blue'})
     setButtonStatus({...buttonStatus, [currentQuestionNo]:'green'})
+    
    }
    const  handleReviewClick =()=>{
-    setCurrentQuestionNo(currentQuestionNo+1)
-    setQuestionOnTheScreen((prevQuestion)=>prevQuestion+1)
+    if(questionOnTheScreen+1<questions.length){
+      setCurrentQuestionNo((prevQuestion)=> prevQuestion +1)
+      setQuestionOnTheScreen((prevQuestion)=>prevQuestion+1)
+      
+    }
     if ( selectedOption){
 
       setReviewWithAns(reviewWithAns + 1)
@@ -109,12 +119,20 @@ const DemoPage = () => {
       setReviewNoAns(reviewNoAns+1)
     }
     setButtonStatus({...buttonStatus, [currentQuestionNo]:'yellow'})
+    if(questionOnTheScreen+1=== questions.length){
+      alert(" There is only 5 question. Your Answer have been submitted")
+    }
    }
    const  handleDumpClick =()=>{
-    setCurrentQuestionNo(currentQuestionNo +1)
-    setQuestionOnTheScreen((prevQuestion)=>prevQuestion+1)
+    if(questionOnTheScreen+1<questions.length){
+      setCurrentQuestionNo((prevQuestion)=> prevQuestion +1)
+      setQuestionOnTheScreen((prevQuestion)=>prevQuestion+1)
+      }
     setDump(dump+1)
     setButtonStatus({...buttonStatus, [currentQuestionNo]:'white'})
+    if(questionOnTheScreen+1=== questions.length){
+      alert(" There is only 5 question. Your Answer have been submitted")
+    }
    }
    
    const handleOptionSelect=(option)=>{
